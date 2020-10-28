@@ -1,0 +1,42 @@
+.tooltip-content {
+    left: 10000px;
+    @apply fixed;
+}
+.tooltipster-sidetip {
+    .tooltipster-box {
+        @apply rounded-md;
+        .tooltipster-content {
+            @apply px-4 py-2;
+        }
+    }
+    &.tooltipster-borderless {
+        .tooltipster-box {
+            background: rgba(10, 10, 10, 0.8);
+        }
+        &.tooltipster-top .tooltipster-arrow-border {
+            border-top-color: rgba(10, 10, 10, 0.8);
+        }
+    }
+    &.tooltipster-shadow .tooltipster-box {
+        box-shadow: 0px 3px 20px #00000014;
+        .tooltipster-content {
+            @apply text-gray-800;
+        }
+    }
+}
+
+.dark {
+    .tooltipster-sidetip {
+        &.tooltipster-shadow {
+            .tooltipster-box {
+                @apply bg-dark-1;
+                .tooltipster-content {
+                    @apply text-gray-300;
+                }
+            }
+            &.tooltipster-top .tooltipster-arrow-border {
+                border-top-color: #293145;
+            }
+        }
+    }
+}
